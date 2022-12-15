@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.food-card{
+    width: 40vh;
+    text-align: center;
+    box-shadow: 0 0 4px gray;
+}
+img{
+    width: 70%;
+    margin: 10px;
+}
+h3{
+    padding-bottom: 5px;
+}
+.food-card:hover{
+    background-color: #FCCD22;
+}
+.randomDiv{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5vh; 
+}
+.randomDiv h1{
+    position: relative;
+    top: 10vh;
+    left: -15vh;
+}
+#searched-food{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10vh;
+    justify-content: center;
+}
+.search-button-Div{
+    display: flex;
+    justify-content: center;
+}
+.search-button-Div #searchBox{
+    margin-right: 4vh;
+}
+.ingredeints{
+    width: 40vh;
+    text-align: center;
+    border: 2px solid grey;
+    box-shadow: 0 0 4px gray;
+    border-radius: 1vh;
+    /* position: relative; */
+    /* justify-content: center */
+    background-color: #FCCD22;
+}
+.ingredeintsDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -30vh;
+    left: 5vh;
+}
+.hide{
+    display: none;
+}
+.searchedDiv h1{
+    text-align: center;
+}
+.navbar{
+    width: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    height: 7vh;
+    margin: 5vh;
+}
+.introbox{
+    height: 40vh;
+    background-color: #FCCD22;
+    color: white;
+    margin-bottom: 5vh;
+}
+.foodimg{
+    width: 60vh;
+    position: relative;
+    left: 130vh;
+    top: -37vh;
+}
+.introbox h3{
+    font-size: 5vh;
+    font-weight: lighter;
+    position: relative;
+    top: 5vh;
+}
+.introbox h1 {
+    position: relative;
+    top: 10vh;
+}
+.eatlovecook{
+    font-size: 10vh;
+    position: relative;
+    top: 5vh;
+    font-weight: 900;
+}
+/* .aboutus{
+    font-size: 2.5vh;
+    text-align: center; */
+/* }
+.aboutus h3 p{
+    font-weight: bolder;
+    margin: 0;
+} */
+footer{
+    background-color: #FCCD22;
+    color: black;
+    font-size: 3vh;
+    display: flex;
+    justify-content: space-around;
+}
+.footerimg{
+    width: 5vh;
+}
+.button{
+    border-radius: 5px;
+    border: none;
+    width: 20vh;
+    height: 5vh;
+    box-shadow: 0px 0px 4px grey;
+    color: white;
+    font-size: 2vh;
+    background-color: #FCCD22;
+}
+#searchBox{
+    width: 35vh;
+    border-radius: 5px;
+    border-style:inset;
+    border: none;
+    box-shadow: 0px 0px 4px grey;
+    color: black;
+    font-size: 2vh;
+    background-color: white;
+}
+search-button-div-large{
+    margin-top: 5vh;
+}
