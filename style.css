@@ -19,25 +19,23 @@ img{
 h3{
     padding-bottom: 5px;
 }
-.food-card:hover{
+.randomDiv .food-card:hover{
     background-color: #FCCD22;
+    cursor: pointer;
 }
 .randomDiv{
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 5vh; 
+    padding-top: 10vh;
 }
 .randomDiv h1{
-    position: relative;
-    top: 10vh;
-    left: -15vh;
+    padding-top: 10vh;
+    padding-right: 10vh;
 }
 #searched-food{
     display: grid;
     grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 10vh;
-    justify-content: center;
+    grid-gap: 10vh; 
 }
 .search-button-Div{
     display: flex;
@@ -48,21 +46,36 @@ h3{
 }
 .ingredeints{
     width: 40vh;
+    height: fit-content;
     text-align: center;
     border: 2px solid grey;
     box-shadow: 0 0 4px gray;
     border-radius: 1vh;
-    /* position: relative; */
-    /* justify-content: center */
-    background-color: #FCCD22;
+    background-color: white;
+    cursor: pointer;
+    animation: popup 0.5s;
 }
 .ingredeintsDiv{
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -30vh;
-    left: 5vh;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 80%; /* Full height */
+    background-color: rgba(0,0,0,0.4); Black w/ opacity
+    
+}
+@keyframes popup{
+    0%{
+        scale: 0.5;
+    }
+    100%{
+        scale: 1;
+    }
 }
 .hide{
     display: none;
@@ -87,37 +100,20 @@ h3{
     background-color: #FCCD22;
     color: white;
     margin-bottom: 5vh;
+    display: flex;
+    justify-content: space-around;
 }
 .foodimg{
     width: 60vh;
-    position: relative;
+    margin-bottom:0 ;
+    /* position: relative;
     left: 130vh;
-    top: -37vh;
-}
-.introbox h3{
-    font-size: 5vh;
-    font-weight: lighter;
-    position: relative;
-    top: 5vh;
-}
-.introbox h1 {
-    position: relative;
-    top: 10vh;
+    top: -30vh; */
 }
 .eatlovecook{
     font-size: 10vh;
-    position: relative;
-    top: 5vh;
-    font-weight: 900;
+    padding-top: 5vh;
 }
-/* .aboutus{
-    font-size: 2.5vh;
-    text-align: center; */
-/* }
-.aboutus h3 p{
-    font-weight: bolder;
-    margin: 0;
-} */
 footer{
     background-color: #FCCD22;
     color: black;
@@ -148,6 +144,35 @@ footer{
     font-size: 2vh;
     background-color: white;
 }
-search-button-div-large{
-    margin-top: 5vh;
+@media only screen and  (max-width: 600px){
+.foodimg{
+    display: none;
+}
+.randomDiv{
+    display: block;
+    font-size: 70%;
+    margin-left: 2vh;
+}
+.introbox p{
+    color:black;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    height: 7vh;
+    margin: 4vh;
+}
+.searchedDiv .food-card{
+    margin-left: 2vh;
+}
+.randomDiv h1{
+    padding-top: 0vh;
+}
+.introbox p{
+    display: none;
+}
+.eatlovecook{
+    padding-top: 0;
+    margin: 3vh;
+}
 }

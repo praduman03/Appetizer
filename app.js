@@ -27,7 +27,9 @@ function randomFood(){
                     <h3>${completeData.meals[0].strMeal}</h3>
                     <h3>${completeData.meals[0].strCategory}</h3>
                     <h3>ingredeints</h3>
-                    <p>${completeData.meals[0].setIngredient1} <br> ${completeData.meals[0].setIngredient2} <br>${completeData.meals[0].setIngredient3} <br>${completeData.meals[0].setIngredient4}</p>
+                    <p>${completeData.meals[0].strIngredient1} <br> ${completeData.meals[0].strIngredient2} <br>${completeData.meals[0].strIngredient3}
+                     <br>${completeData.meals[0].strIngredient4}<br>${completeData.meals[0].strIngredient5}<br>${completeData.meals[0].strIngredient6}<br>${completeData.meals[0].strIngredient7}
+                     <br>${completeData.meals[0].strIngredient8}<br>${completeData.meals[0].strIngredient9}<br>${completeData.meals[0].strIngredient10}</p>
                 </div>`;
     document.getElementById("random-food").innerHTML=random;
     document.getElementById("ing").innerHTML=random2;
