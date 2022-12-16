@@ -15,6 +15,7 @@ body{
 img{
     width: 70%;
     margin: 10px;
+    
 }
 h3{
     padding-bottom: 5px;
@@ -45,9 +46,6 @@ h3{
     flex-wrap: wrap;
     justify-content: center;
 }
-/* .search-button-Div #searchBox{
-    margin-right: 4vh;
-} */
 .ingredeints{
     width: 40vh;
     height: fit-content;
@@ -135,6 +133,7 @@ footer{
     font-size: 2vh;
     background-color: #FCCD22;
     cursor: pointer;
+
 }
 #searchBox{
     text-align: center;
@@ -185,5 +184,8 @@ footer{
 .eatlovecook{
     padding-top: 0;
     margin: 3vh;
+}
+.button{
+    margin-top: 2vh;
 }
 }
