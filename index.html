@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="#">
     <title>Appetizer</title>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 </head>
 <body>
+     <!-- navbar with website's logo -->
     <div class="nav">
         <div class="navbar">
             <img src="./assets/Appetizer.png" alt="">
             <h1>Appetizer</h1>
         </div>
     </div>
+    <!-- intro division with about the website -->
     <div class="introbox">
         <div class="introtext">
             <h1 class="eatlovecook">EAT. LOVE. COOK.</h1>
@@ -23,6 +26,7 @@
         </div>
         <img class="foodimg" src="./assets/food.png" alt="">
     </div>
+    <!-- Search button and the search box -->
     <div class="search-button-div-large">
         <div class="search-button-Div">
             <input type="text" id="searchBox" placeholder="Search here">
@@ -31,20 +35,27 @@
             </a>
         </div>
     </div>
+    <!-- Random meal of the day Card  -->
     <div class="randomDiv">
         <h1>Random Meal Of the Day</h1>
         <div id="random-food">
         </div>
     </div>
+    <!-- Ingredeints card for random meal -->
     <div class="maindiv">
     <div class="ingredeintsDiv hide" id="ing">
         </div>
     </div>
+    <!-- Searched meal category cards-->
     <div class="searchedDiv" id="searchedDiv">
         <h1 id="searchheading" class="hide">Searched Results  </h1>
-        <div id="searched-food">
+        <div id="searched-food" class="searched-food">
         </div>
     </div>
+    <!-- recipe of searched meal cards -->
+    <div id="texting" class="recipeDiv showRecipe">
+    </div>   
+    <!-- Credit of the website in footer with social media link -->
     <footer>
         <p>Made with ❤️ by Praduman.</p>
         <div>
