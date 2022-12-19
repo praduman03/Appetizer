@@ -26,7 +26,6 @@ function randomFood(){
     .then((data)=>{
         return data.json();
     }).then((completeData)=>{
-// console.log(completeData)
         let random='';
         let random2='';
         //adding food card details in the card
@@ -67,7 +66,6 @@ function SearchedFood(){
         return data.json();
 
     }).then((completeData)=>{
-        console.log(completeData)
         let random='';
         if(completeData.meals){
                 completeData.meals.forEach((meal)=>{
@@ -76,7 +74,7 @@ function SearchedFood(){
                     <img src=${meal.strMealThumb} alt="">
                 </div>
                 <h3>${meal.strMeal}</h3>
-                <p id="recipe-btn">Get Recipe</p>
+                <p id="recipe-btn" onClick="getMealRecipe(${meal.idMeal})">Get Recipe</p>
                 </div>`
            })
         }
@@ -90,23 +88,20 @@ function SearchedFood(){
     }
 
     // function to show ingredeints when we click on searched category
-    document.getElementById("searched-food").addEventListener('click', getMealRecipe);
     function getMealRecipe(e){
-            let mealItem = e.target.parentElement;
-            fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
+            fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i="+e)
             .then(response => response.json())
             .then((meal)=>{
-                console.log(meal)
                 meal= meal.meals[0];
                 document.getElementById("texting").innerHTML=`<div class="Recipe">
                 <h3>${meal.strMeal}</h3>
                 <img src=${meal.strMealThumb} >
                 <h3>Category</h3>
-                <p>${meal.strCategory}</p>
+                <p>${meal.strCategory}</p>   
                 <h3>ingredeints</h3>
-                <p>${meal.strIngredient1} &nbsp ${meal.strIngredient2} &nbsp ${meal.strIngredient3}
-                 <br>${meal.strIngredient4} &nbsp ${meal.strIngredient5} &nbsp ${meal.strIngredient6} &nbsp ${meal.strIngredient7}
-                 <br>${meal.strIngredient8} &nbsp ${meal.strIngredient9} &nbsp ${meal.strIngredient10}</p>
+                <p>${meal.strIngredient1.toUpperCase()} &nbsp ${meal.strIngredient2.toUpperCase()} &nbsp ${meal.strIngredient3.toUpperCase()}
+                 <br>${meal.strIngredient4.toUpperCase()} &nbsp ${meal.strIngredient5.toUpperCase()} &nbsp ${meal.strIngredient6.toUpperCase()} &nbsp ${meal.strIngredient7.toUpperCase()}
+                 <br>${meal.strIngredient8.toUpperCase()} &nbsp ${meal.strIngredient9.toUpperCase()} &nbsp ${meal.strIngredient10.toUpperCase()}</p>
                  <div class="watchRecipe-btn"><a   href=${meal.strYoutube}>Watch recipe</a></div><br>
                  <div id="closeRecipe">close</div>
             </div>`;
