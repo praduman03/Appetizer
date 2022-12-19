@@ -99,9 +99,9 @@ function SearchedFood(){
                 <h3>Category</h3>
                 <p>${meal.strCategory}</p>   
                 <h3>ingredeints</h3>
-                <p>${meal.strIngredient1.toUpperCase()} &nbsp ${meal.strIngredient2.toUpperCase()} &nbsp ${meal.strIngredient3.toUpperCase()}
-                 <br>${meal.strIngredient4.toUpperCase()} &nbsp ${meal.strIngredient5.toUpperCase()} &nbsp ${meal.strIngredient6.toUpperCase()} &nbsp ${meal.strIngredient7.toUpperCase()}
-                 <br>${meal.strIngredient8.toUpperCase()} &nbsp ${meal.strIngredient9.toUpperCase()} &nbsp ${meal.strIngredient10.toUpperCase()}</p>
+                <p>${meal.strIngredient1} &nbsp ${meal.strIngredient2} &nbsp ${meal.strIngredient3}
+                 <br>${meal.strIngredient4} &nbsp ${meal.strIngredient5} &nbsp ${meal.strIngredient6} &nbsp ${meal.strIngredient7}
+                 <br>${meal.strIngredient8} &nbsp ${meal.strIngredient9} &nbsp ${meal.strIngredient10}</p>
                  <div class="watchRecipe-btn"><a   href=${meal.strYoutube}>Watch recipe</a></div><br>
                  <div id="closeRecipe">close</div>
             </div>`;
