@@ -54,8 +54,10 @@ function randomFood(){
         console.log(error)
     })
 }
+// calling random meal function 
 randomFood()
 
+// function for the searched category dish
 var search=document.getElementById("searchBox")
 function SearchedFood(){
     document.getElementById("searchheading").classList.remove("hide")
@@ -68,7 +70,7 @@ function SearchedFood(){
         console.log(completeData)
         let random='';
         if(completeData.meals){
-                completeData.meals.forEach(meal=>{
+                completeData.meals.forEach((meal)=>{
                 random+=`<div class="food-card" data-id="${meal.idMeal}">
                 <div>
                     <img src=${meal.strMealThumb} alt="">
@@ -76,24 +78,18 @@ function SearchedFood(){
                 <h3>${meal.strMeal}</h3>
                 <p id="recipe-btn">Get Recipe</p>
                 </div>`
-
-            })
+           })
         }
         else{
                 random= `<h3 class="notfound">category "${input}" not found</h3>`
             }
-
     document.getElementById("searched-food").innerHTML=random;
-
-    
-    
-
     }).catch((error)=>{
         console.log(error)
     })
     }
 
-
+    // function to show ingredeints when we click on searched category
     document.getElementById("searched-food").addEventListener('click', getMealRecipe);
     function getMealRecipe(e){
             let mealItem = e.target.parentElement;
@@ -114,7 +110,6 @@ function SearchedFood(){
                  <div class="watchRecipe-btn"><a   href=${meal.strYoutube}>Watch recipe</a></div><br>
                  <div id="closeRecipe">close</div>
             </div>`;
-                // document.getElementById("texting").innerHTML=text;
                 
                 document.querySelector(".recipeDiv").style.display ="block"
                 document.getElementById("closeRecipe").onclick=()=>{
